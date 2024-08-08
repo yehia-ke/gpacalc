@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/gpacalc/static/css/main.3f1c8da3.css",
+    "main.js": "/gpacalc/static/js/main.32795d75.js",
+    "static/js/453.6e840709.chunk.js": "/gpacalc/static/js/453.6e840709.chunk.js",
+    "index.html": "/gpacalc/index.html",
+    "main.3f1c8da3.css.map": "/gpacalc/static/css/main.3f1c8da3.css.map",
+    "main.32795d75.js.map": "/gpacalc/static/js/main.32795d75.js.map",
+    "453.6e840709.chunk.js.map": "/gpacalc/static/js/453.6e840709.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3f1c8da3.css",
+    "static/js/main.32795d75.js"
+  ]
+}
