@@ -5,13 +5,13 @@
   border: 1px solid #777b80;
   border-radius: 5px;
   background: #4d4949;
-  box-shadow: 0 0 6cap rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 6cap rgba(255, 255, 228, 0.4);
 }
 
 h1,
 h2 {
   text-align: center;
-  color: white;
+  color: #ffffe4;
 }
 
 form {
@@ -28,7 +28,7 @@ form div {
 
 form label {
   flex: 1;
-  color: white;
+  color: #ffffe4;
 }
 
 form input {
@@ -37,7 +37,7 @@ form input {
 ul {
   list-style-type: none;
   padding: 0;
-  color: white
+  color: #ffffe4
 }
 
 li {
@@ -47,7 +47,7 @@ li {
 button {
   padding: 5px;
   background-color: #8d8989;
-  color: white;
+  color: #ffffe4;
   border: none;
   border-radius: 5px;
   cursor: pointer;

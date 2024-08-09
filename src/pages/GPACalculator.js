@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 import CourseForm from './CourseForm';
 import CourseList from './CourseList';
-
+import styles from './GPACalculator.module.css';
 const GPACalculator = () => {
   const [courses, setCourses] = useState([]);
 
   const addCourse = (course) => {
     const existingCourse = courses.find((existing) => existing.subjectName === course.subjectName);
     if (existingCourse) {
-      // Handle duplicate course (e.g., show an error message)
       alert(`Course "${course.subjectName}" already exists.`);
       return;
     }
@@ -26,7 +25,7 @@ const GPACalculator = () => {
   };
 
   return (
-    <div className="container">
+    <div className={styles.container}>
       <h1>GPA Calculator</h1>
       <CourseForm addCourse={addCourse} />
       <CourseList courses={courses} />
