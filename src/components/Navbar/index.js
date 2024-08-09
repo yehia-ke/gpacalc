@@ -1,7 +1,7 @@
 // Filename - "./components/Navbar.js
 
 import React from "react";
-import { Bars, Nav, NavLink, NavMenu } from "./NavbarElements";
+import { Nav, NavLink, NavMenu } from "./NavbarElements";
 
 const Navbar = () => {
   return (
