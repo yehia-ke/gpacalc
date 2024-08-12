@@ -6,22 +6,27 @@ const GPACalculator = () => {
   const [courses, setCourses] = useState([]);
 
   const addCourse = (course) => {
-    const existingCourse = courses.find(
-      (existing) => existing.subjectName === course.subjectName
-    );
-    if (existingCourse) {
-      alert(`Course "${course.subjectName}" already exists.`);
-      return;
-    }
-    setCourses([...courses, course]);
+    setCourses((prevCourses) => {
+      const existingCourse = prevCourses.find(
+        (existing) => existing.subjectName === course.subjectName
+      );
+      if (existingCourse) {
+        return prevCourses; // Return the original courses array
+      }
+      return [...prevCourses, course]; // Add the new course
+    });
   };
 
   const removeCourse = (courseToRemove) => {
-    setCourses(courses.filter((course) => course !== courseToRemove));
+    setCourses((courses) => {
+      return courses.filter((course) => course !== courseToRemove);
+    });
   };
-
   const resetCourses = () => {
-    setCourses([]);
+    setCourses(courses => {
+      return [];
+    });
+    window.location.reload();
   };
 
   const calculateGPA = () => {
@@ -36,7 +41,26 @@ const GPACalculator = () => {
     );
     return (totalPoints / totalCredits).toFixed(2);
   };
+  const handleFileUpload = async (event) => {
+    const file = event.target.files[0];
+    if (!file) return;
 
+
+    const reader = new FileReader();
+    reader.onload = handleFileRead;
+    reader.readAsText(file);
+  };
+  const handleFileRead = (event) => {
+    const csvData = event.target.result;
+    const rows = csvData.split("\n");
+    const parsedData = rows.map((row) => row.split(","));
+    parsedData.pop();
+    parsedData.forEach((data) => {
+      const [subjectName, creditHours, grade] = data;
+      addCourse({subjectName, creditHours, grade});
+
+    });
+  };
   return (
     <div className={styles.container}>
       <h1>GPA Calculator</h1>
@@ -44,6 +68,7 @@ const GPACalculator = () => {
       <CourseList courses={courses} removeCourse={removeCourse} />
       <h2>Current GPA: {courses.length > 0 ? calculateGPA() : "0.00"}</h2>
       <button onClick={resetCourses}>Reset</button>
+      <input type="file" id="csvFileInput" accept=".csv" onChange={handleFileUpload} />
     </div>
   );
 };
