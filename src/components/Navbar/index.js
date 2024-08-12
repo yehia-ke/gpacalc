@@ -14,8 +14,8 @@ const Navbar = () => {
           <NavLink to="/gpa-calculator" activeStyle>
             GPA Calculator
           </NavLink>
-          <NavLink to="/blogs" activeStyle>
-            Blogs
+          <NavLink to="/course-calculator" activeStyle>
+            Course Calculator
           </NavLink>
           <NavLink to="/sign-up" activeStyle>
             Sign Up
