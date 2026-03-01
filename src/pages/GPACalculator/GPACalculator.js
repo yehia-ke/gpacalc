@@ -94,7 +94,8 @@ const GPACalculator = () => {
             textAlign: "center",
             maxWidth: "600px"
           }}>
-            <p style={{ wordBreak: "break-all", fontFamily: "monospace" }}>
+            <h2 style={{ margin: "0 0 20px 0", color: "black" }}>1.20.1</h2>
+            <p style={{ wordBreak: "break-all", fontFamily: "monospace", color: "black" }}>
               01101101 01100011 00101110 01111001 01100101 01101000 01101001 01100001 00101101 01101011 01100101 00101110 01100011 01101111 01101101
             </p>
             <button onClick={() => setShowCode(false)}>Close</button>
