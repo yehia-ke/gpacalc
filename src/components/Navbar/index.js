@@ -18,7 +18,7 @@ const Navbar = () => {
             Course Calculator
           </NavLink>
           <NavLink to="/about" activeStyle>
-            Yoohoo over here
+            About
           </NavLink>
         </NavMenu>
       </Nav>
