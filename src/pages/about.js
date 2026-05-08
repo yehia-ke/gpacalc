@@ -7,7 +7,7 @@ const About = () => {
     return (
         <div>
             <h1 className={styles.h1}>
-                Yehia Eltantawi
+                The word is not here
             </h1>
         </div>
     );
