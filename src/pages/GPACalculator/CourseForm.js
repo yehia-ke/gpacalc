@@ -44,7 +44,7 @@ const CourseForm = ({ addCourse }) => {
     'D+': 3.7,
     'D': 4.0,
     'F': 5.0,
-    'Pssbzayhal' : 16.0,
+    'Ybbkijhqju' : 16.0,
   };
 
   return (
